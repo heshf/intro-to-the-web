@@ -1,0 +1,12 @@
+<div style='border: 3px dashed turquoise'>
+     <img src='http://bit.ly/1eze8aE'>
+   </div>
+
+   <h1> My name is <%=@kitten_name%> </h1>
+
+<% if @kitten_name == nil %>
+   <form action="/named-cat" method="get">
+	 <input type="text" name="kitten_name">
+	 <input type="submit" value="Submit">
+   </form>
+<% end %>
