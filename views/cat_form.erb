@@ -1,0 +1,8 @@
+   <h1> My name is <%=@kitten_name%> </h1>
+
+<% if @kitten_name == nil %>
+   <form action="/named-cat" method="post">
+	 <input type="text" name="kitten_name">
+	 <input type="submit" value="Submit">
+   </form>
+<% end %>

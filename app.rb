@@ -18,10 +18,17 @@ get '/random-cat' do
 	erb(:index)
 end
 
-get '/named-cat' do
+post '/named-cat' do
 	p params
 	@kitten_name = params[:kitten_name]
 	erb(:index)
 end
+
+get '/cat-form' do
+	p params
+	@kitten_name = params[:kitten_name]
+	erb(:cat_form)
+end
+
 
 set :session_secret, 'super_secret'
